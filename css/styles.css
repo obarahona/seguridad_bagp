@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #000; /* Fondo negro */
+  color: #f4f4f4; /* Texto claro */
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s, padding 0.3s; /* Transiciones suaves */
+}
+
+header.scrolled {
+  background-color: #333; /* Color de fondo cuando haces scroll */
+  padding: 10px 0; /* Reducir el tamaño de la cabecera al hacer scroll */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* Tamaño del logo */
+  margin-right: 15px; /* Espacio entre el logo y el texto */
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  color: #a83232; /* Rojo oscuro al hacer hover en los enlaces */
+}
+
+/* Estilos del slider de fondo */
+.background-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Mantener el slider detrás del contenido */
+}
+
+.bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.bg-slide.active {
+  opacity: 1;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Mantener el color de texto */
+}
+
+.hero h2 {
+  font-size: 3em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+section {
+  padding: 40px 0;
+}
+
+.container {
+  z-index: 1; /* Asegurar que el contenido esté encima del slider */
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f4f4f4; /* Títulos claros */
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.service {
+  background-color: #222; /* Fondo gris oscuro para las secciones de servicios */
+  padding: 20px;
+  border-radius: 5px;
+  color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #a83232; /* Rojo oscuro para los títulos de servicios */
+}
+
+.service ul {
+  list-style-type: disc; /* Tipo de viñeta (puede ser disc, circle, square, etc.) */
+  padding-left: 20px; /* Añade sangría a la lista */
+}
+
+.service li {
+  margin-bottom: 10px; /* Añade espacio entre los elementos de la lista */
+  text-indent: 15px; /* Añade sangría en la primera línea del texto */
+}
+
+.clients {
+  display: flex;
+  justify-content: space-around; /* Distribuye uniformemente los logos */
+  align-items: center; /* Alinea los logos verticalmente */
+  flex-wrap: wrap; /* Permite que los logos se envuelvan en varias líneas si es necesario */
+  margin: 20px 0; /* Añade espacio alrededor de la sección */
+}
+
+.client img {
+  width: 150px; /* Tamaño consistente para todos los logos */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 10px; /* Añade espacio entre los logos */
+}
+
+.cliente4 img {
+  width: 150px; /* Haz que el cliente 4 sea más grande */
+}
+
+.centrado {
+  text-align: center; /* Centra el texto solo para los elementos con la clase "centrado" */
+}
+
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
